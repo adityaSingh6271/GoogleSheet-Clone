@@ -1,6 +1,6 @@
 const headRow = document.getElementById("head-row");
 const snoContainer = document.querySelector(".sno");
-const rows = 100, columns = 26;
+const rows = 1000, columns = 26;
 const body = document.getElementById("body");
 
 // Create header cells
