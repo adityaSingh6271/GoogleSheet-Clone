@@ -1,0 +1,169 @@
+/* Reset default margin */
+body {
+    margin: 0;
+}
+
+/* Main container for the spreadsheet */
+.container {
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: 30px auto;
+    overflow-x: scroll;
+    border: 0.5px solid #C0C0C0;
+    box-sizing: border-box;
+    outline: 2px solid; /* Optional outline for debugging */
+}
+
+/* Column labels (A, B, C, ...) */
+.plate {
+    background-color: gray;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+/* Header row containing column labels */
+.head-row {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+/* Styling for individual column headers */
+.head-row .col-head {
+    width: 151.1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0.5px solid #C0C0C0;
+    box-sizing: border-box;
+}
+
+/* Row numbers */
+.sno {
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+}
+
+/* Styling for individual row numbers */
+.sno .sno-cell {
+    height: 20px;
+    border: 0.5px solid #C0C0C0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for rows */
+.row {
+    display: flex;
+}
+
+/* Styling for individual cells */
+.cell {
+    border: 0.5px solid #C0C0C0;
+    width: 150px;
+    min-height: 20px;
+    height: 20px !important;
+    overflow: hidden;
+    margin-right: -0.5px;
+}
+
+/* Focus style for cells */
+.cell:focus {
+    outline: 0.5px solid blue;
+    outline-offset: -2px;
+}
+
+/* Options section styling */
+.options {
+    background-color: #F8FBFD;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling for form container */
+.form-container {
+    padding: 10px;
+    background-color: #EDF2FA;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+}
+
+/* Flex alignment utility */
+.fr-aic {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Hide checkboxes and radios */
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}
+
+/* Hide color input */
+input[type="color"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* Styling for checked checkboxes and radios */
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+    background-color: #D3E2FD;
+}
+
+/* Styling for labels */
+label {
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* Styling for the selected cell box */
+.box {
+    width: 80vw;
+    margin: auto;
+}
+
+/* Styling for the selected cell display */
+.box .selected-cell {
+    background-color: #D3E2FD;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30px;
+    text-align: center;
+}
+
+/* Styling for input fields */
+.box input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 50px;
+    outline: none;
+    border-width: .1px;
+}
+
+/* Styling for the active cell */
+.active-cell {
+    border-color: #0957D0;
+    outline: 2px solid #0957D0;
+    position: relative;
+    z-index: 10;
+}
